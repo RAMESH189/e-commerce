@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a simple E-commerce application made using `Next.js` and `Tailwind CSS` as part of Dil foods accessment
 
 ## Getting Started
 
@@ -16,21 +16,26 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Learn About Project Arcitecture
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The App consist of `Home`, `Cart`, `CheckOut` and `Product` pages.
 
-## Learn More
+All navigation is done using `Next/Link`.
 
-To learn more about Next.js, take a look at the following resources:
+State management is done using `createContext`, `useReducer` and `useContext`.
+A custom error page, Loading effect and a page Not Found page are added to make the application a bit more user friendly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`util` folder is used for the helper functions.
+All the styling is done using `Tailwind CSS`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Read these before using the app to avoid confusion -\_-
 
-## Deploy on Vercel
+The Checkout button is disabled when cart is empty
+Price item count and all other state are updated using context API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Dummy data used in this project is from [Fake store Api](https://fakestoreapi.com/).
+Read the documentation for more useful info.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+if you are going to use the API for fake store data don't forget to add the `domain` in the `next.config.js` as follows:
+
+`domains: ["fakestoreapi.com"],`
