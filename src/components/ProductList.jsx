@@ -8,7 +8,7 @@ const ProductList = ({data}) => {
           md:grid-cols-3 lg:grid-cols-4"
     >
       {data.map((data) => (
-        <ProductCard key={data.id} data={data} />
+        <ProductCard key={data.id} product={data} />
       ))}
     </div>
   )

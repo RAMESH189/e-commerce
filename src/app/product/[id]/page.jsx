@@ -1,16 +1,11 @@
-import Image from "next/image";
 import React from "react";
 
-async function getProduct(id) {
-  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-  const data = await response.json();
-  return await data;
-}
+import Image from "next/image";
+import { getProduct } from "@/util/util";
 
 const productItem = async ({ params }) => {
   const productId = params.id;
   const product = await getProduct(productId);
-  console.log(product);
 
   return (
     <div className="w-full">
@@ -19,7 +14,7 @@ const productItem = async ({ params }) => {
           src={product.image}
           width={500}
           height={300}
-          className="rounded-lg"
+          className="rounded-lg border border-black p-4 shadow-md"
           style={{
             maxWidth: "100%",
             height: "auto",
@@ -27,16 +22,14 @@ const productItem = async ({ params }) => {
           alt="Movie poster"
         />
         <div className="p-4">
-          <h2 className="mb-4 font-bold text-xl">
-            {product.title}
-          </h2>
+          <h2 className="mb-4 font-bold text-xl">{product.title}</h2>
           <p className="mb-4">{product.description}</p>
           <p className="mb-4 font-bold">Price: {product.price}$</p>
-          <p>Rating : {product.rate || 'No rating'}</p>
+          <p className="font-bold">Rating : {product.rate || "No rating"}</p>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default productItem;
