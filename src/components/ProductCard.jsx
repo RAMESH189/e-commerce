@@ -32,8 +32,10 @@ const ProductCard = ({ product }) => {
           src={product.image}
           width={500}
           height={300}
-          className="rounded-t-lg"
+          placeholder="blur"
+          blurDataURL="/spinner.svg"
           alt="No Image available"
+          className="rounded-t-lg"
           style={{ maxWidth: "100%", height: "auto" }}
         />
       </Link>

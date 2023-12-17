@@ -14,12 +14,14 @@ const productItem = async ({ params }) => {
           src={product.image}
           width={500}
           height={300}
+          placeholder="blur"
+          blurDataURL="/spinner.svg"
+          alt="product image"
           className="rounded-lg border border-black p-4 shadow-md"
           style={{
             maxWidth: "100%",
             height: "auto",
           }}
-          alt="Movie poster"
         />
         <div className="p-4">
           <h2 className="mb-4 font-bold text-xl">{product.title}</h2>

@@ -16,11 +16,11 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between gap-4 items-center">
         <Link href="/checkout">
           <button
             disabled={total === 0}
-            className="disabled:bg-gray-400 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 mx-3 rounded-md border-none"
+            className="disabled:bg-gray-400 bg-blue-600 hover:bg-blue-700 text-white text-md px-3 py-1 mx-3 rounded-md border-none"
           >
             Checkout
           </button>

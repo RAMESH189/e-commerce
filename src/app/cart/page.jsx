@@ -1,7 +1,6 @@
 "use client";
 import { CartCard } from "@/components/CartCard";
 import { useCart } from "@/context/CartContext";
-import Image from "next/image";
 
 export default function Cart() {
   const { total, cartList } = useCart();
